@@ -1,5 +1,5 @@
 function fetchTables() {
-    fetch('http://localhost:8081/restaurant/order/tables')
+    fetch('http://124.158.5.70:8081/restaurant/order/tables')
         .then(response => response.json())
         .then(data => {
             console.log(data);

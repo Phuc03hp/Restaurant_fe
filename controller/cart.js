@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     
     async function loadOrder() {
         try {
-            const response = await fetch(`http://127.0.0.1:8081/restaurant/order/table/${tableId}`);
+            const response = await fetch(`http://124.158.5.70:8081/restaurant/order/table/${tableId}`);
             if (response.ok) {
                 const order = await response.json();
                 
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         };
 
         try {
-            const orderResponse = await fetch(`http://127.0.0.1:8081/restaurant/order/table/${tableId}/add_items`, {
+            const orderResponse = await fetch(`http://124.158.5.70:8081/restaurant/order/table/${tableId}/add_items`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

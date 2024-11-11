@@ -12,7 +12,7 @@ loginForm.addEventListener('submit', async (event) => {
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:8081/restaurant/auth/login', {
+        const response = await fetch('http://124.158.5.70:8081/restaurant/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ loginForm.addEventListener('submit', async (event) => {
 
         if (responseJson.result && responseJson.result.authenticated) {
             // Gửi yêu cầu để lấy thông tin người dùng bằng username
-            const userResponse = await fetch(`http://127.0.0.1:8081/restaurant/auth/${username}`, {
+            const userResponse = await fetch(`http://124.158.5.70:8081/restaurant/auth/${username}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

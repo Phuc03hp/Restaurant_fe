@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let menuData = [];
 
 
-    fetch('http://localhost:8081/restaurant/menu')
+    fetch('http://124.158.5.70:8081/restaurant/menu')
         .then(response => response.json())
         .then(data => {
             menuData = data;

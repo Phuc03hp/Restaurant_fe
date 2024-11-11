@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             try {
-                const response = await fetch('http://localhost:8081/restaurant/customer', {
+                const response = await fetch('http://124.158.5.70:8081/restaurant/customer', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(customerData)
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch(`http://127.0.0.1:8081/restaurant/order/table/${tableId}`);
+            const response = await fetch(`http://124.158.5.70:8081/restaurant/order/table/${tableId}`);
             if (response.ok) {
                 const order = await response.json();
                 cartItems = order.foods.map((food, index) => ({
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             try {
-                const paymentResponse = await fetch(`http://127.0.0.1:8081/restaurant/checkout/${tableId}`, {
+                const paymentResponse = await fetch(`http://124.158.5.70:8081/restaurant/checkout/${tableId}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(requestBody),

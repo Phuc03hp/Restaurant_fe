@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = signupForm.querySelector('input[name="password"]').value;
 
         try {
-            const response = await fetch('http://127.0.0.1:8081/restaurant/auth/signup', {
+            const response = await fetch('http://124.158.5.70:8081/restaurant/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
